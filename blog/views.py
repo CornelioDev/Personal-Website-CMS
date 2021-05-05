@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from .models import Article, Category
 
 # Create your views here.
@@ -12,7 +12,7 @@ def list(request):
     })
 
 def category(request, category_id):
-    category = Category.objects.get(id=category_id)
+    category = get_object_or_404(Category, id=category_id)
 
     return render(request, 'categories/category.html', {
         'title':category,
