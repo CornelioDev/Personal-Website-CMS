@@ -13,7 +13,7 @@
                     {{article.user.first_name}} {{article.user.last_name}}
                     | {{article.created_at}}
                     |{% for category in article.categories.all %}
-                        <a href="#"><span class="tab">{{category}}</span></a>
+                        <a href="{% url 'category' category.id %}"><span class="tab">{{category}}</span></a>
                     {% endfor %}
                 </span>
                 {{article.content|safe}} 
