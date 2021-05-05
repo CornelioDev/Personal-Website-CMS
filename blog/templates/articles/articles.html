@@ -1,0 +1,23 @@
+<ul>
+    {% for article in articles %}
+        <li class='article-item'>
+            {% if article.image != 'null' %}
+                <div class="image">
+                    <img src="{{article.image.url}}" alt="{{article.title}}"/>
+                </div>
+            {% endif %}
+            
+            <div class="data">
+                <h2>{{article.title}}</h2>
+                <span class="date">
+                    {{article.user.first_name}} {{article.user.last_name}}
+                    | {{article.created_at}}
+                    |{% for category in article.categories.all %}
+                        <a href="#"><span class="tab">{{category}}</span></a>
+                    {% endfor %}
+                </span>
+                {{article.content|safe}} 
+            </div>
+        </li>
+    {% endfor %}
+</ul>

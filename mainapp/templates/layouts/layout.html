@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}{% endblock %} | José Cornelio
+    </title>
+    <link rel="stylesheet" type="text/css" href="{%static 'css/styles.css'%}">
+</head>
+<body>
+    <header>
+        <div id="logotipo">
+        <img src="{%static 'images/logo.png'%}" alt="">
+        <h1>Proyecto con Django</h1>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Inicio</a></li>
+            <li><a href="{% url 'list_article' %}">Categorías</a>
+                <ul>
+                    {% for category in categories %}
+                        <li><a href="{% url 'category' category.0 %}">{{category.1}}</a></li> 
+                    {% endfor %}                  
+                </ul>
+            </li>
+                
+            {% for page in pages %}
+                <li><a href="{% url 'page' page.2 %}">{{page.1}}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+    
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
+    <div id="content">
+        <div class="box">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    
+    <footer>
+        Master en Python &copy; José Cornelio | {% now "Y" %}
+    </footer>
+</body>
+</html>
