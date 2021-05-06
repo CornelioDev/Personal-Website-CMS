@@ -219,6 +219,10 @@ nav > ul > li:hover > ul > li:hover a {
     width: 100%;
 }
 
+.pagination {
+    text-align: center;
+}
+
 .title {
     color: #444;
     letter-spacing: 1px;
