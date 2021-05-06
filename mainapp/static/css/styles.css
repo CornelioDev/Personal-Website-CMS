@@ -209,6 +209,16 @@ nav > ul > li:hover > ul > li:hover a {
     padding-left: 0;
 }
 
+.box .image {
+    float: left;
+    margin-right: 40px;
+    width: 460px;
+}
+
+.box .image img {
+    width: 100%;
+}
+
 .title {
     color: #444;
     letter-spacing: 1px;
