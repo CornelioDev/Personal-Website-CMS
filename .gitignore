@@ -89,5 +89,6 @@ local_settings.py
 .env
 db.sqlite3
 .vscode
-!media/articles/.gitkeep
-media/articles/*
+media/articles/*.jpg
+media/articles/*.jpeg
+media/articles/*.png
