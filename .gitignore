@@ -85,6 +85,8 @@ target/
 __pycache__/
 local_settings.py
 
+### Misc ###
 .env
 db.sqlite3
 .vscode
+media/articles/
