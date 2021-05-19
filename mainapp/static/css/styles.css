@@ -303,9 +303,14 @@ footer {
 }
 
 .alert-success,
-.message {
+.message,
+.alert {
     padding: 20px;
     text-align: center;
     background-color: #2ba977;
     color: white;
+}
+
+.alert-warning {
+    background-color: #b30808;
 }
