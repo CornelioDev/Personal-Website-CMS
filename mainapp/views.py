@@ -44,6 +44,7 @@ def login_page(request):
             return redirect('index')
         else:
             messages.warning(request, 'No te has identificado correctamente :(')
+    
     return render(request, 'users/login.html', {
         'title': 'Iniciar Sesión'
     })
