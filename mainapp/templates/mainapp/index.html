@@ -8,8 +8,7 @@
         <div class="alert alert-success">
             {{ message }}
         </div>
-
-        <h2>Bienvenido/a, {{ request.user.username }} {{user.last_name}}</h2>
-        <p><i>{{user.email}}</i></p>
     {% endfor %}
+    <h2>Bienvenido/a, {{ user.first_name }} {{user.last_name}}</h2>
+    <p><i>{{user.email}}</i></p>
 {% endblock content %}
