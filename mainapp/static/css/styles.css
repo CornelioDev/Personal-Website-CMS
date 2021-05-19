@@ -175,6 +175,8 @@ nav > ul > li:hover > ul > li:hover a {
 }
 
 .box form input[type="text"],
+.box form input[type="email"],
+.box form input[type="password"],
 .box form textarea,
 .box form select {
     width: 100%;
@@ -300,6 +302,7 @@ footer {
     margin: 0 auto;
 }
 
+.alert-success,
 .message {
     padding: 20px;
     text-align: center;
