@@ -48,3 +48,7 @@ def login_page(request):
     return render(request, 'users/login.html', {
         'title': 'Iniciar Sesión'
     })
+
+def logout_user(request):
+    logout(request)
+    return redirect('login')

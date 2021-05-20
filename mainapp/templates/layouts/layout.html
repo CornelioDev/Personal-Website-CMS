@@ -28,13 +28,18 @@
                         {% endfor %}                  
                     </ul>
                 </li>
-            {% endif %}    
+               
+                {% for page in pages %}
+                    <li><a href="{% url 'page' page.2 %}">{{page.1}}</a></li>
+                {% endfor %}
+
+                <li><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
+            {% endif %} 
             
-            {% for page in pages %}
-                <li><a href="{% url 'page' page.2 %}">{{page.1}}</a></li>
-            {% endfor %}
-            <li><a href="{% url 'login' %}">Login</a></li>
-            <li><a href="{% url 'register' %}">Registro</a></li>
+            {% if not user.email %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'register' %}">Registro</a></li>
+            {% endif %}
         </ul>
     </nav>
     
